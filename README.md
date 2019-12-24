@@ -1,4 +1,8 @@
 # webscraper
+This project is a web crawler that looks for AAPL ticker symbol using the python library: https://api.worldtradingdata.com/api/v1/stock?symbol=AAPL and currently returns the json blurb of the response data.
+
+
+
 "source venv/bin/activate" activated virtual environment while developing this project. 
 
 "pip3 freeze" was used to freeze the following requirements:

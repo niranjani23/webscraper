@@ -1,6 +1,7 @@
 from flask import Flask
 import os
 from ticker import tickerdata
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -19,6 +20,6 @@ def index():
 
 @app.route('/tickerdata')
 def endpoint1():
-    return tickerdata.get_data()
+    return jsonify(tickerdata.get_data())
 
 

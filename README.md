@@ -27,6 +27,10 @@ twilio==6.33.1
 urllib3==1.25.3
 Werkzeug==0.15.5
 
+pip3 install -r base_requirements.txt
+
+Do pip3 freeze >> requirements.txt only if you added new dependencies to the requirements.txt file. 
+
 Python 3.7 has been used for this project.
 
 "export WORLD_TRADING_DATA_API_KEY=xxxx" was set within the virtualenv

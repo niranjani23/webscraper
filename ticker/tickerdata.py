@@ -12,7 +12,7 @@ def get_data():
     print(resp.text)
     data = json.loads(resp.text)
     print(data)
-    myclient = pymongo.MongoClient(os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/'))
+    myclient = pymongo.MongoClient(os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/'), retryWrites=False)
     mydb = myclient["mystockdb"]
     mycol = mydb["tickerdata"]
     mydict = data

@@ -4,6 +4,7 @@ class Config():
     HOST = 'http://localhost:5000'
     SECRET_KEY = 'supersecret'
     JSONIFY_MIMETYPE = 'application/json'
+    MONGODB_URI=os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/')
 
 
 class Develop(Config):

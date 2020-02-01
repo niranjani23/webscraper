@@ -3,6 +3,7 @@ import os
 from ticker import tickerdata
 from flask import jsonify
 
+
 app = Flask(__name__)
 
 env = os.environ.get('ENV', 'DEV')

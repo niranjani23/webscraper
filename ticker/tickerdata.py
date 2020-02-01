@@ -2,6 +2,7 @@ import requests
 import json
 import os
 import pymongo
+#from ticker import app #TODO: fix import in order to use app.config
 
 API_KEY = os.environ['WORLD_TRADING_DATA_API_KEY']
 
@@ -11,7 +12,7 @@ def get_data():
     print(resp.text)
     data = json.loads(resp.text)
     print(data)
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    myclient = pymongo.MongoClient(os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/'))
     mydb = myclient["mystockdb"]
     mycol = mydb["tickerdata"]
     mydict = data
